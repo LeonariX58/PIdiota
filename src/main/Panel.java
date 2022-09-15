@@ -3,7 +3,7 @@ package main;
 import javax.swing.*;
 import java.awt.*;
 
-public class GamePanel extends JPanel implements Runnable {
+public class Panel extends JPanel implements Runnable {
 
     int originalTileSize = 16;
     int scale = 1;
@@ -16,7 +16,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     Thread gameThread;
 
-    public GamePanel() {
+    public Panel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
@@ -48,15 +48,11 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update() {
-        player.makePlayerMove(keyH);
-        player.followMouse();
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         Graphics2D g2 = (Graphics2D)g;
-        player.draw((Graphics2D) g);
-        enemies.draw((Graphics2D) g);
     }
 }

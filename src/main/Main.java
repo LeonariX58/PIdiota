@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame window = new JFrame("GameStop");
+        JFrame window = new JFrame("Calcula PI");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.isResizable();
 
